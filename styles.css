@@ -35,7 +35,7 @@ h3{
     color: salmon;
 }
 
-.icon-container, .main-icon{
+.icon-container, .keyboard-icon{
     display: flex;
     justify-content: center;
     padding-top: 10px;
