@@ -5,19 +5,54 @@
     <title>Cindy Navarro Personal Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 <body>
-<div class="main-icon">
-    <i class="fa fa-keyboard-o"></i>
+<!-- Navigation Menu header on the top -->
+<div class="navigation-menu">
+    <div class="w3-row w3-black" >
+        <div class="w3-col s4">
+            <a href="index.html" class="w3-button w3-block w3-coral">HOME</a>
+        </div>
+        <div class="w3-col s4">
+            <a href="about.html" class="w3-button w3-block w3-coral">ABOUT</a>
+        </div>
+        <div class="w3-col s4">
+            <a href="passwordPage.html" class="w3-button w3-block w3-coral">BLOG</a>
+        </div>
+    </div>
 </div>
-<div class="typewrite">
-    <h1>Cindy Navarro</h1>
-</div>
-<h3> std::cout << " CS Graduate | Queens College " ; </h3>
-<div class="icon-container">
-    <a href="https://www.linkedin.com/in/nycindynavarro/"><i class="fa fa-linkedin-square"></i></a>
-    <a href="https://github.com/cindynavrro"><i class="fa fa-github"></i></a>
-    <a target="_top" href="mailto:cindynavrro@gmail.com"><i class="fa fa-envelope"></i></a>
+<div class="content">
+    <div class="desktop-icon" >
+        <i class="fa fa-desktop"></i>
+    </div>
+    <div class="typewrite">
+        <h1 id="typewrite-name" ></h1>
+    </div>
+    <div class="bio-container">
+        <h3 style="font-size: medium"> std::cout << " CS Graduate | Queens College " ; </h3>
+    </div>
+    <div class="icon-container">
+        <a href="https://www.linkedin.com/in/nycindynavarro/"><i class="fa fa-linkedin-square"></i></a>
+        <a href="https://github.com/cindynavrro"><i class="fa fa-github"></i></a>
+        <a target="_top" href="mailto:cindynavrro@gmail.com"><i class="fa fa-envelope"></i></a>
+    </div>
 </div>
 </body>
 </html>
+
+<script>
+    var i = 0;
+    var txt = 'Cindy Navarro';
+    var speed = 200;
+    // var object = document.getElementById("typewrite-name")
+    window.onload = function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("typewrite-name").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+</script>
+
